@@ -1,0 +1,5 @@
+googletrans
+aiogram
+apscheduler
+httpcore==0.15.0 httpx pymongo googletrans==3.1.0a0
+#Поздно разобрался с этим файлом, поэтому зависимости могут быть не все, по мере работы будут добавляться.
