@@ -1,0 +1,35 @@
+main.py:17 #INFO    [2024-03-03 12:43:23,383] - __main__ - Starting bot
+dispatcher.py:520 #INFO    [2024-03-03 12:43:23,900] - aiogram.dispatcher - Start polling
+dispatcher.py:339 #INFO    [2024-03-03 12:43:23,994] - aiogram.dispatcher - Run polling for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:171 #INFO    [2024-03-03 12:43:31,123] - aiogram.event - Update id=555690107 is not handled. Duration 0 ms by bot id=6251976390
+dispatcher.py:451 #WARNING [2024-03-03 12:43:44,281] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:355 #INFO    [2024-03-03 12:43:44,282] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:547 #INFO    [2024-03-03 12:43:44,283] - aiogram.dispatcher - Polling stopped
+main.py:17 #INFO    [2024-03-03 12:43:47,712] - __main__ - Starting bot
+dispatcher.py:520 #INFO    [2024-03-03 12:43:48,270] - aiogram.dispatcher - Start polling
+dispatcher.py:339 #INFO    [2024-03-03 12:43:48,360] - aiogram.dispatcher - Run polling for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:451 #WARNING [2024-03-03 12:43:57,137] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:355 #INFO    [2024-03-03 12:43:57,138] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:547 #INFO    [2024-03-03 12:43:57,141] - aiogram.dispatcher - Polling stopped
+main.py:17 #INFO    [2024-03-03 12:44:00,874] - __main__ - Starting bot
+dispatcher.py:520 #INFO    [2024-03-03 12:44:01,272] - aiogram.dispatcher - Start polling
+dispatcher.py:339 #INFO    [2024-03-03 12:44:01,417] - aiogram.dispatcher - Run polling for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:451 #WARNING [2024-03-03 12:51:12,388] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:355 #INFO    [2024-03-03 12:51:12,389] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:547 #INFO    [2024-03-03 12:51:12,389] - aiogram.dispatcher - Polling stopped
+main.py:16 #INFO    [2024-03-03 12:51:16,791] - __main__ - Starting bot
+dispatcher.py:520 #INFO    [2024-03-03 12:51:17,163] - aiogram.dispatcher - Start polling
+dispatcher.py:339 #INFO    [2024-03-03 12:51:17,385] - aiogram.dispatcher - Run polling for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:171 #INFO    [2024-03-03 12:51:27,794] - aiogram.event - Update id=555690108 is not handled. Duration 0 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-03-03 12:51:45,854] - aiogram.event - Update id=555690109 is not handled. Duration 0 ms by bot id=6251976390
+dispatcher.py:451 #WARNING [2024-03-03 12:52:53,266] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:355 #INFO    [2024-03-03 12:52:53,267] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:547 #INFO    [2024-03-03 12:52:53,267] - aiogram.dispatcher - Polling stopped
+main.py:17 #INFO    [2024-03-03 12:52:57,202] - __main__ - Starting bot
+dispatcher.py:520 #INFO    [2024-03-03 12:52:57,810] - aiogram.dispatcher - Start polling
+dispatcher.py:339 #INFO    [2024-03-03 12:52:57,904] - aiogram.dispatcher - Run polling for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:171 #INFO    [2024-03-03 12:53:10,885] - aiogram.event - Update id=555690110 is not handled. Duration 0 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-03-03 12:53:41,774] - aiogram.event - Update id=555690111 is not handled. Duration 0 ms by bot id=6251976390
+dispatcher.py:451 #WARNING [2024-03-03 12:53:53,224] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:355 #INFO    [2024-03-03 12:53:53,225] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:547 #INFO    [2024-03-03 12:53:53,228] - aiogram.dispatcher - Polling stopped
