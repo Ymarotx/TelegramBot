@@ -25,7 +25,7 @@ class Simulator:
             res = await session.execute(stmt)
             result_all = res.scalars().all()
             random.shuffle(result_all)
-            result_15 = result_all[:3]
+            result_15 = result_all[:15]
             await storage.set(f'last_page_simulator_{user_id}',f'{len(result_15)}')
             for i in result_15:
                 cls.list_word.append(i)
@@ -83,6 +83,10 @@ class Simulator:
         word_ru_from_dict = full_dict_user[1].get(word_en_from_dict)
         translate = translator.Translate(answer)
         translate_answer = translate.translate_text()
+        translate_answer.text.lower().replace(',','')
+        word_en_from_dict.lower().replace(',','')
+        answer.lower().replace(',','')
+        word_ru_from_dict.lower().replace(',','')
         lists = await storage.get(f'{user_id}')
         data = json.loads(lists)
         if translate_answer.text.lower() == word_en_from_dict.lower() and answer.lower() != word_ru_from_dict.lower():
@@ -91,6 +95,9 @@ class Simulator:
             count = data[0][f'{page}'][f'{word_en}']
             if count == 0:
                 data[0][f'{page}'][f'{word_en}'] = 4
+                await storage.set(f'{user_id}', json.dumps(data))
+            else:
+                data[0][f'{page}'][f'{word_en}'] = 3
                 await storage.set(f'{user_id}', json.dumps(data))
             page = (await storage.get(f'current_page_{user_id}')).decode('utf-8')
             await storage.set(f'current_page_{user_id}', f'{int(page) + 1}')
@@ -111,9 +118,9 @@ class Simulator:
         learned_word = ''
         for page,dict in full_dict_user[0].items():
             for word,count in dict.items():
-                if count == 0:
+                if count == 0 or count == 1 or count == 2:
                     value += 1
-                elif count == 4:
+                if count == 4:
                     lists_word_for_increase.append(word)
         if value == 0:
             async with async_session() as session:

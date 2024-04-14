@@ -20,7 +20,7 @@ class Translate:
         if en_or_ru == 'en':
             text_ru = translater.translate(self.word_ru,dest='ru')
             return text_ru
-        if en_or_ru == 'ru':
+        if en_or_ru != 'en':
             text_en = translater.translate(self.word_ru,dest='en')
             return text_en
     @classmethod

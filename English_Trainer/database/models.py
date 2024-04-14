@@ -18,6 +18,7 @@ class Table_Users(Base):
     chat_id: Mapped[str]
     new_word_table: Mapped["Table_New_Word"] = relationship(back_populates='user')
     learned_word_table: Mapped["Table_Learned_Word"] = relationship(back_populates='user')
+    reminder_table: Mapped['Table_Reminder'] = relationship(back_populates='user')
 
     __table_args__ = (UniqueConstraint('chat_id',name='unique_chat_id'),)
 
@@ -50,4 +51,15 @@ class Table_Learned_Word(Base):
     user_id: Mapped[int] = mapped_column(ForeignKey('users.id'))
     user: Mapped[list["Table_Users"]] = relationship(back_populates='learned_word_table')
     count_answer: Mapped[int] = mapped_column(Integer,default=0)
+
+class Table_Reminder(Base):
+    __tablename__ = 'reminder'
+
+    id: Mapped[intpk]
+    time: Mapped[str]
+    jobs_id: Mapped[str|None]
+    user_id: Mapped[int] = mapped_column(ForeignKey('users.id'))
+    user: Mapped[list['Table_Users']] = relationship(back_populates='reminder_table')
+
+    __table_args__ = (UniqueConstraint('user_id',name='unique_user_id'),)
 

@@ -15,6 +15,10 @@ class SimulatorCallbackFactory(CallbackData,prefix='simulator'):
     name_step: str
     callback: str
 
+class ReminderCallbackFactory(CallbackData,prefix='reminder'):
+    name_step: str
+    callback: str
+
 
 
 def main_menu_kb():
@@ -73,10 +77,10 @@ def simulator_new_pagination_kb(page,last_page):
 def reminder_true_kb():
     kb_builder: InlineKeyboardBuilder = InlineKeyboardBuilder()
     btn1: InlineKeyboardButton = InlineKeyboardButton(text='Отключить',
-                                                      callback_data=MainMenuCallbackFactory(name_step='reminder',
-                                                                                            callback='reminder_off').pack())
+                                                      callback_data=ReminderCallbackFactory(name_step='reminder',
+                                                                                            callback='off').pack())
     btn2: InlineKeyboardButton = InlineKeyboardButton(text='Назад',
-                                                      callback_data=MainMenuCallbackFactory(name_step='reminder',
+                                                      callback_data=ReminderCallbackFactory(name_step='reminder',
                                                                                             callback='back').pack())
     kb_builder.row(*[btn1,btn2],width=1)
     return kb_builder.as_markup()
@@ -84,10 +88,10 @@ def reminder_true_kb():
 def reminder_false_kb():
     kb_builder: InlineKeyboardBuilder = InlineKeyboardBuilder()
     btn1: InlineKeyboardButton = InlineKeyboardButton(text='Включить',
-                                                      callback_data=MainMenuCallbackFactory(name_step='reminder',
-                                                                                            callback='reminder_on').pack())
+                                                      callback_data=ReminderCallbackFactory(name_step='reminder',
+                                                                                            callback='on').pack())
     btn2: InlineKeyboardButton = InlineKeyboardButton(text='Назад',
-                                                      callback_data=MainMenuCallbackFactory(name_step='reminder',
+                                                      callback_data=ReminderCallbackFactory(name_step='reminder',
                                                                                             callback='back').pack())
     kb_builder.row(*[btn1,btn2],width=1)
     return kb_builder.as_markup()
@@ -97,5 +101,6 @@ def scheduler_kb():
     kb_builder.row(InlineKeyboardButton(text='Начать', callback_data=SimulatorCallbackFactory(name_step='simulator',
                                                                                              callback='simulator_new').pack()))
     return kb_builder.as_markup()
+
 
 
