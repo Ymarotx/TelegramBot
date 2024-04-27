@@ -13,7 +13,7 @@ from sqlalchemy import select, insert, delete
 from aiogram.exceptions import TelegramBadRequest
 
 from database.database import create_tables,async_session
-from database.models import Table_New_Word,Table_Learned_Word,Table_Users,Table_Reminder
+from database.models import Table_New_Word,Table_Learned_Word,Table_Users,Table_Reminder,Table_All_Word
 from lexicon.lexicon import LEXICON_MAIN
 from keyboards import user_keyboards
 from FSM.fsm import FSMMainMenu,FSMSimulator,FSMReminder
@@ -69,7 +69,7 @@ async def process_command_main_menu(message:Message,state:FSMContext,bot:Bot):
             pass
     async with async_session() as session:
         for en,ru in end_dict.items():
-            stmt = insert(Table_New_Word).values({'word_en':en,'word_ru':ru,'user_id':1})
+            stmt = insert(Table_All_Word).values({'word_en':en,'word_ru':ru,'user_id':1})
             await session.execute(stmt)
         await session.commit()
     storage = await Redis.redis_db_0()
