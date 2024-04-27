@@ -9,19 +9,24 @@ class Dict:
     @classmethod
     def check_len_dict(cls) -> list:
         lists_text = []
-        max_len = 4000
-        if len(cls.text) > max_len:
-            while True:
-                if cls.text[-1] != ';':
-                    max_len -= 1
-                elif cls.text[max_len] == ';' and max_len <= 4000:
-                    lists_text.append(cls.text[:max_len + 1])
-                    lists_text.append(cls.text[max_len + 2:])
-                    break
-                else:
-                    max_len -= 1
-        else:
-            lists_text.append(cls.text)
+        lenghth = len(cls.text)
+        new_text = cls.text
+        end_len = 0
+        while True:
+            max_len = 4000
+            if lenghth > max_len:
+                while True:
+                    if new_text[max_len] != ';':
+                        max_len -= 1
+                    else:
+                        lists_text.append(new_text[:max_len + 1])
+                        break
+                lenghth -= len(new_text[:max_len])
+                new_text = cls.text[max_len + 1:]
+                end_len += max_len + 1
+            else:
+                lists_text.append(cls.text[end_len + 1:])
+                break
         return lists_text
 
     @classmethod
@@ -43,6 +48,7 @@ class Dict:
             cls.text = ''
             stmt = (
                 select(Table_New_Word)
+                .join(Table_New_Word.user)
                 .options(contains_eager(Table_New_Word.user))
                 .filter(Table_Users.chat_id == id)
             )

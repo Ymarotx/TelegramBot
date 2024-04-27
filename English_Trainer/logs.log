@@ -33,3 +33,16 @@ dispatcher.py:171 #INFO    [2024-03-03 12:53:41,774] - aiogram.event - Update id
 dispatcher.py:451 #WARNING [2024-03-03 12:53:53,224] - aiogram.dispatcher - Received SIGINT signal
 dispatcher.py:355 #INFO    [2024-03-03 12:53:53,225] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
 dispatcher.py:547 #INFO    [2024-03-03 12:53:53,228] - aiogram.dispatcher - Polling stopped
+main.py:28 #INFO    [2024-04-27 18:46:49,917] - __main__ - Starting bot
+base.py:181 #INFO    [2024-04-27 18:46:50,028] - apscheduler.scheduler - Scheduler started
+base_py3.py:25 #WARNING [2024-04-27 18:46:50,101] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='31'], next run at: 2024-04-28 18:31:00 MSK)" was missed by 0:15:50.101438
+base_py3.py:25 #WARNING [2024-04-27 18:46:50,102] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='37'], next run at: 2024-04-28 18:37:00 MSK)" was missed by 0:09:50.102201
+base_py3.py:25 #WARNING [2024-04-27 18:46:50,102] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='44'], next run at: 2024-04-28 18:44:00 MSK)" was missed by 0:02:50.102482
+base_py3.py:25 #WARNING [2024-04-27 18:46:50,102] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='44'], next run at: 2024-04-28 18:44:00 MSK)" was missed by 0:02:50.102672
+base_py3.py:25 #WARNING [2024-04-27 18:46:50,102] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='55'], next run at: 2024-04-27 18:55:00 MSK)" was missed by 23:51:50.102819
+base_py3.py:25 #WARNING [2024-04-27 18:46:50,102] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='19', minute='47'], next run at: 2024-04-27 19:47:00 MSK)" was missed by 22:59:50.102958
+dispatcher.py:520 #INFO    [2024-04-27 18:46:50,580] - aiogram.dispatcher - Start polling
+dispatcher.py:339 #INFO    [2024-04-27 18:46:50,671] - aiogram.dispatcher - Run polling for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:451 #WARNING [2024-04-27 18:47:04,842] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:355 #INFO    [2024-04-27 18:47:04,843] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:547 #INFO    [2024-04-27 18:47:04,843] - aiogram.dispatcher - Polling stopped
