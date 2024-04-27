@@ -57,21 +57,21 @@ async def process_command_main_menu(message:Message,state:FSMContext,bot:Bot):
     await state.set_state(FSMSimulator.simulator_end)
 @router.message(Command(commands='main_menu'),~StateFilter(FSMSimulator.simulator_new))
 async def process_command_main_menu(message:Message,state:FSMContext,bot:Bot):
-    file = open('english_dict.txt', 'r')
-    a = file.read()
-    lists = a.split(';')
-    end_dict = {}
-    for i in lists:
-        try:
-            a = i.split(':')
-            end_dict[a[0].strip()] = a[1].strip()
-        except:
-            pass
-    async with async_session() as session:
-        for en,ru in end_dict.items():
-            stmt = insert(Table_All_Word).values({'word_en':en,'word_ru':ru,'user_id':1})
-            await session.execute(stmt)
-        await session.commit()
+    # file = open('english_dict.txt', 'r')
+    # a = file.read()
+    # lists = a.split(';')
+    # end_dict = {}
+    # for i in lists:
+    #     try:
+    #         a = i.split(':')
+    #         end_dict[a[0].strip()] = a[1].strip()
+    #     except:
+    #         pass
+    # async with async_session() as session:
+    #     for en,ru in end_dict.items():
+    #         stmt = insert(Table_All_Word).values({'word_en':en,'word_ru':ru,'user_id':1})
+    #         await session.execute(stmt)
+    #     await session.commit()
     storage = await Redis.redis_db_0()
     await message.delete()
     mes_delet = await message.answer(text=LEXICON_MAIN['main_menu'],reply_markup=user_keyboards.main_menu_kb())
