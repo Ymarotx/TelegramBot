@@ -5,6 +5,7 @@ from sqlalchemy import insert, select
 
 from database.database import async_session
 from database.models import Table_All_Word,Table_New_Word,Table_Users
+from lexicon.lexicon import LEXICON_KEYBOARD
 
 class Translate:
     word_ru: str
@@ -55,5 +56,5 @@ class Translate:
 
 def create_kb_english():
     kb_builder = InlineKeyboardBuilder()
-    kb_builder.row(InlineKeyboardButton(text='Добавить в словарь',callback_data='english_kb'))
+    kb_builder.row(InlineKeyboardButton(text=LEXICON_KEYBOARD['dict_add'],callback_data='english_kb'))
     return kb_builder.as_markup()

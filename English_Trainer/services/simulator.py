@@ -90,7 +90,7 @@ class Simulator:
         lists = await storage.get(f'{user_id}')
         data = json.loads(lists)
         if translate_answer.text.lower() == word_en_from_dict.lower() and answer.lower() != word_ru_from_dict.lower():
-            return 'Перевод верный, но мне нужно другое слово, попробуй ещё раз'
+            return LEXICON_SIMULATOR['simulator_check_word']
         elif answer.lower() == word_ru_from_dict.lower():
             count = data[0][f'{page}'][f'{word_en}']
             if count == 0:
@@ -150,9 +150,9 @@ class Simulator:
                         await session.commit()
                         learned_word += f'{word.word_en}\n '
             if learned_word:
-                return 'Тест завершён,вы выучили следующие слова:\n '+learned_word + 'Для выхода используйте кнопку /main_menu из главного меню'
+                return LEXICON_SIMULATOR['simulator_true_end_1']+learned_word + LEXICON_SIMULATOR['simulator_true_end_2']
             else:
-                return 'Тест завершён, новых слов не было изучено. Для выхода используйте кнопку /main_menu из главного меню'
+                return LEXICON_SIMULATOR['simulator_false_end']
 
 
 

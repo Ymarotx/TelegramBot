@@ -13,6 +13,7 @@ from config_data.config import BOT_TOKEN
 from database.database import create_tables,async_session
 from database.models import Table_New_Word,Table_Learned_Word,Table_Users,Table_Reminder
 from sqlalchemy.orm import contains_eager
+from lexicon.lexicon import LEXICON_REMINDER
 
 bot: Bot = Bot(token=BOT_TOKEN, parse_mode='HTML')
 
@@ -75,6 +76,6 @@ class Scheduler:
 
     @classmethod
     async def send_message(cls,chat_id):
-        text = 'Пора пройти тест по новым словам'
+        text = LEXICON_REMINDER['reminder_send_message']
         await bot.send_message(chat_id=chat_id,text=text,reply_markup=kb())
 

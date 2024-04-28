@@ -46,3 +46,20 @@ dispatcher.py:339 #INFO    [2024-04-27 18:46:50,671] - aiogram.dispatcher - Run 
 dispatcher.py:451 #WARNING [2024-04-27 18:47:04,842] - aiogram.dispatcher - Received SIGINT signal
 dispatcher.py:355 #INFO    [2024-04-27 18:47:04,843] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
 dispatcher.py:547 #INFO    [2024-04-27 18:47:04,843] - aiogram.dispatcher - Polling stopped
+main.py:28 #INFO    [2024-04-28 12:11:14,693] - __main__ - Starting bot
+base.py:181 #INFO    [2024-04-28 12:11:14,778] - apscheduler.scheduler - Scheduler started
+base_py3.py:25 #WARNING [2024-04-28 12:11:14,808] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='19', minute='47'], next run at: 2024-04-28 19:47:00 MSK)" was missed by 16:24:14.808068
+dispatcher.py:520 #INFO    [2024-04-28 12:11:15,266] - aiogram.dispatcher - Start polling
+dispatcher.py:339 #INFO    [2024-04-28 12:11:15,361] - aiogram.dispatcher - Run polling for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:171 #INFO    [2024-04-28 12:11:22,378] - aiogram.event - Update id=555693045 is handled. Duration 250 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-28 12:11:27,235] - aiogram.event - Update id=555693046 is handled. Duration 1063 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-28 12:11:30,893] - aiogram.event - Update id=555693047 is handled. Duration 135 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-28 12:11:32,326] - aiogram.event - Update id=555693048 is handled. Duration 140 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-28 12:11:33,456] - aiogram.event - Update id=555693049 is handled. Duration 96 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-28 12:11:36,889] - aiogram.event - Update id=555693050 is handled. Duration 101 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-28 12:11:38,577] - aiogram.event - Update id=555693051 is handled. Duration 360 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-28 12:11:41,549] - aiogram.event - Update id=555693052 is handled. Duration 89 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-28 12:11:44,993] - aiogram.event - Update id=555693053 is handled. Duration 268 ms by bot id=6251976390
+dispatcher.py:451 #WARNING [2024-04-28 12:12:01,026] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:355 #INFO    [2024-04-28 12:12:01,027] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:547 #INFO    [2024-04-28 12:12:01,027] - aiogram.dispatcher - Polling stopped
