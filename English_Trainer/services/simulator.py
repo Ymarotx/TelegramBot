@@ -8,7 +8,7 @@ from database.models import Table_New_Word,Table_Users,Table_Learned_Word
 from sqlalchemy import select, insert, update, delete
 from database.redis_db import Redis
 from services import translator
-
+from lexicon.lexicon import LEXICON_SIMULATOR
 
 
 class Simulator:
