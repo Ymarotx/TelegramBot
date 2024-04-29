@@ -25,7 +25,7 @@ class Simulator:
             res = await session.execute(stmt)
             result_all = res.scalars().all()
             random.shuffle(result_all)
-            result_15 = result_all[:15]
+            result_15 = result_all[:3]
             await storage.set(f'last_page_simulator_{user_id}',f'{len(result_15)}')
             for i in result_15:
                 cls.list_word.append(i)

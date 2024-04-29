@@ -90,10 +90,8 @@ async def process_main_menu_factory(callback:CallbackQuery,
         await state.set_state(FSMMainMenu.dict)
     if callback_data.name_step == 'menu' and callback_data.callback == 'simulator':
         mes_del = await callback.message.edit_text(text=LEXICON_MAIN['simulator'],reply_markup=user_keyboards.simulator_kb())
-        # await DeleteMessage.add_to_redis_delete_message(chat_id=callback.from_user.id, mes_id=mes_del.message_id)
         await state.set_state(FSMMainMenu.simulator)
     if callback_data.name_step == 'menu' and callback_data.callback == 'reminder':
-        # await Scheduler.sheduler_add_job()
         async with async_session() as session:
             stmt = (
                 select(Table_Reminder)
@@ -107,14 +105,10 @@ async def process_main_menu_factory(callback:CallbackQuery,
                 mes_del = await callback.message.edit_text(
                     text=f'<code>Напоминание установлено ежедневно на {time_reminder.time}</code>',
                     reply_markup=user_keyboards.reminder_true_kb())
-                # await DeleteMessage.add_to_redis_delete_message(chat_id=callback.from_user.id,
-                #                                                 mes_id=mes_del.message_id)
             except sqlalchemy.exc.NoResultFound:
                 mes_del = await callback.message.edit_text(
                     text=LEXICON_REMINDER['reminder_absent'],
                     reply_markup=user_keyboards.reminder_false_kb())
-                # await DeleteMessage.add_to_redis_delete_message(chat_id=callback.from_user.id,
-                #                                                 mes_id=mes_del.message_id)
         await state.set_state(FSMMainMenu.reminder)
 
 
@@ -125,8 +119,6 @@ async def process_reminder_factory(callback:CallbackQuery,
                                     ):
     if callback_data.name_step == 'reminder' and callback_data.callback == 'on':
         mes_del = await callback.message.edit_text(text=LEXICON_REMINDER['reminder_on'])
-        # await DeleteMessage.add_to_redis_delete_message(chat_id=callback.from_user.id, mes_id=mes_del.message_id)
-
         await state.set_state(FSMReminder.get_time)
     if callback_data.name_step == 'reminder' and callback_data.callback == 'off':
         async with async_session() as session:
@@ -152,12 +144,10 @@ async def process_reminder_factory(callback:CallbackQuery,
             await session.commit()
         mes_del = await callback.message.edit_text(text=LEXICON_REMINDER['reminder_absent'],
                     reply_markup=user_keyboards.reminder_false_kb())
-        # await DeleteMessage.add_to_redis_delete_message(chat_id=callback.from_user.id, mes_id=mes_del.message_id)
         await callback.answer(text=LEXICON_REMINDER['reminder_delete'])
         await state.set_state(FSMMainMenu.reminder)
     if callback_data.name_step == 'reminder' and callback_data.callback == 'back':
         mes_del = await callback.message.edit_text(text=LEXICON_MAIN['main_menu'], reply_markup=user_keyboards.main_menu_kb())
-        # await DeleteMessage.add_to_redis_delete_message(chat_id=callback.from_user.id, mes_id=mes_del.message_id)
         await state.set_state(FSMMainMenu.main_menu)
 
 
@@ -195,7 +185,9 @@ async def process_dict_factory(callback:CallbackQuery,
         await callback.message.delete()
         try:
             for message in list_messages:
-                await callback.message.answer(text=message)
+                mes_del = await callback.message.answer(text=message)
+                await DeleteMessage.add_to_redis_delete_message(chat_id=callback.from_user.id,
+                                                                mes_id=mes_del.message_id)
                 await asyncio.sleep(1)
                 await state.set_state(FSMMainMenu.dict_all)
         except TelegramBadRequest:
