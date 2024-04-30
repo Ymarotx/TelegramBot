@@ -309,7 +309,6 @@ async def reminder_start_simulator(callback:CallbackQuery,
     mes_edit = await callback.message.edit_text(text=text, reply_markup=user_keyboards.simulator_new_pagination_kb(page,
                                                                                                                    last_page))
     await storage.hset(f'message_del_{callback.from_user.id}', 'callback_kb_simulator_new', f'{mes_edit.message_id}')
-    # await DeleteMessage.add_to_redis_delete_message(chat_id=callback.from_user.id, mes_id=mes_edit.message_id)
     await state.set_state(FSMSimulator.simulator_new)
 
 @router.callback_query(F.data == 'reminder_start',~StateFilter(FSMMainMenu.main_menu))

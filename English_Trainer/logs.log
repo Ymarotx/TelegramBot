@@ -133,3 +133,70 @@ dispatcher.py:232 #INFO    [2024-04-28 19:23:48,465] - aiogram.dispatcher - Conn
 dispatcher.py:451 #WARNING [2024-04-28 19:40:52,108] - aiogram.dispatcher - Received SIGINT signal
 dispatcher.py:355 #INFO    [2024-04-28 19:40:52,108] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
 dispatcher.py:547 #INFO    [2024-04-28 19:40:52,109] - aiogram.dispatcher - Polling stopped
+main.py:24 #INFO    [2024-04-30 17:54:06,728] - __main__ - Starting bot
+base.py:181 #INFO    [2024-04-30 17:54:06,903] - apscheduler.scheduler - Scheduler started
+base_py3.py:25 #WARNING [2024-04-30 17:54:07,016] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='31'], next run at: 2024-04-30 18:31:00 MSK)" was missed by 23:23:07.016857
+base_py3.py:25 #WARNING [2024-04-30 17:54:07,017] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='37'], next run at: 2024-04-30 18:37:00 MSK)" was missed by 23:17:07.017201
+base_py3.py:25 #WARNING [2024-04-30 17:54:07,017] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='44'], next run at: 2024-04-30 18:44:00 MSK)" was missed by 23:10:07.017373
+base_py3.py:25 #WARNING [2024-04-30 17:54:07,017] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='44'], next run at: 2024-04-30 18:44:00 MSK)" was missed by 23:10:07.017508
+base_py3.py:25 #WARNING [2024-04-30 17:54:07,017] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='55'], next run at: 2024-04-30 18:55:00 MSK)" was missed by 22:59:07.017618
+base_py3.py:25 #WARNING [2024-04-30 17:54:07,017] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='19', minute='47'], next run at: 2024-04-30 19:47:00 MSK)" was missed by 22:07:07.017719
+dispatcher.py:520 #INFO    [2024-04-30 17:54:07,472] - aiogram.dispatcher - Start polling
+dispatcher.py:339 #INFO    [2024-04-30 17:54:07,603] - aiogram.dispatcher - Run polling for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:171 #INFO    [2024-04-30 17:54:08,097] - aiogram.event - Update id=555693067 is handled. Duration 268 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:54:09,808] - aiogram.event - Update id=555693068 is handled. Duration 140 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:54:11,342] - aiogram.event - Update id=555693069 is handled. Duration 362 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:54:15,475] - aiogram.event - Update id=555693070 is handled. Duration 204 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:54:16,598] - aiogram.event - Update id=555693071 is handled. Duration 1 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:54:27,809] - aiogram.event - Update id=555693072 is handled. Duration 6186 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:54:36,672] - aiogram.event - Update id=555693073 is handled. Duration 762 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:54:45,315] - aiogram.event - Update id=555693074 is handled. Duration 853 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:54:52,716] - aiogram.event - Update id=555693075 is handled. Duration 1481 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:54:57,496] - aiogram.event - Update id=555693076 is handled. Duration 1917 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:55:08,980] - aiogram.event - Update id=555693077 is handled. Duration 720 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:55:11,772] - aiogram.event - Update id=555693078 is handled. Duration 675 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:55:12,943] - aiogram.event - Update id=555693079 is handled. Duration 610 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:55:19,691] - aiogram.event - Update id=555693080 is handled. Duration 898 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:55:45,357] - aiogram.event - Update id=555693081 is handled. Duration 899 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:55:47,347] - aiogram.event - Update id=555693082 is handled. Duration 646 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:55:48,510] - aiogram.event - Update id=555693083 is handled. Duration 599 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:55:51,852] - aiogram.event - Update id=555693084 is handled. Duration 744 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:56:08,838] - aiogram.event - Update id=555693085 is handled. Duration 1173 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:56:24,509] - aiogram.event - Update id=555693086 is handled. Duration 902 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:56:26,833] - aiogram.event - Update id=555693087 is handled. Duration 720 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:56:28,198] - aiogram.event - Update id=555693088 is handled. Duration 913 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:56:35,850] - aiogram.event - Update id=555693089 is handled. Duration 643 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:57:44,947] - aiogram.event - Update id=555693090 is handled. Duration 802 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:57:50,893] - aiogram.event - Update id=555693091 is handled. Duration 766 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:57:52,874] - aiogram.event - Update id=555693092 is handled. Duration 629 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:57:54,221] - aiogram.event - Update id=555693093 is handled. Duration 667 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:57:56,959] - aiogram.event - Update id=555693094 is handled. Duration 756 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:58:04,034] - aiogram.event - Update id=555693095 is handled. Duration 783 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:58:12,351] - aiogram.event - Update id=555693096 is handled. Duration 797 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:58:16,454] - aiogram.event - Update id=555693097 is handled. Duration 865 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:58:19,603] - aiogram.event - Update id=555693098 is handled. Duration 626 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:58:22,874] - aiogram.event - Update id=555693099 is handled. Duration 1006 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:58:25,864] - aiogram.event - Update id=555693100 is handled. Duration 771 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:58:27,261] - aiogram.event - Update id=555693101 is handled. Duration 891 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:58:29,165] - aiogram.event - Update id=555693102 is handled. Duration 1460 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:58:31,845] - aiogram.event - Update id=555693103 is handled. Duration 786 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:58:34,721] - aiogram.event - Update id=555693104 is handled. Duration 1059 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:58:37,965] - aiogram.event - Update id=555693105 is handled. Duration 631 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:58:40,961] - aiogram.event - Update id=555693106 is handled. Duration 706 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:58:44,397] - aiogram.event - Update id=555693107 is handled. Duration 854 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:58:46,151] - aiogram.event - Update id=555693108 is handled. Duration 990 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:58:47,836] - aiogram.event - Update id=555693109 is handled. Duration 863 ms by bot id=6251976390
+dispatcher.py:451 #WARNING [2024-04-30 17:59:29,039] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:355 #INFO    [2024-04-30 17:59:29,040] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:547 #INFO    [2024-04-30 17:59:29,040] - aiogram.dispatcher - Polling stopped
+main.py:24 #INFO    [2024-04-30 17:59:34,510] - __main__ - Starting bot
+base.py:181 #INFO    [2024-04-30 17:59:34,597] - apscheduler.scheduler - Scheduler started
+dispatcher.py:520 #INFO    [2024-04-30 17:59:34,929] - aiogram.dispatcher - Start polling
+dispatcher.py:339 #INFO    [2024-04-30 17:59:35,024] - aiogram.dispatcher - Run polling for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:171 #INFO    [2024-04-30 17:59:41,642] - aiogram.event - Update id=555693110 is handled. Duration 745 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:59:42,848] - aiogram.event - Update id=555693111 is handled. Duration 145 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:59:43,674] - aiogram.event - Update id=555693112 is handled. Duration 262 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-04-30 17:59:48,025] - aiogram.event - Update id=555693113 is handled. Duration 710 ms by bot id=6251976390
+dispatcher.py:451 #WARNING [2024-04-30 18:00:00,555] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:355 #INFO    [2024-04-30 18:00:00,556] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:547 #INFO    [2024-04-30 18:00:00,556] - aiogram.dispatcher - Polling stopped

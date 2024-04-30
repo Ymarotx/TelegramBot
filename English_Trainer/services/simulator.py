@@ -25,7 +25,7 @@ class Simulator:
             res = await session.execute(stmt)
             result_all = res.scalars().all()
             random.shuffle(result_all)
-            result_15 = result_all[:3]
+            result_15 = result_all[:15]
             await storage.set(f'last_page_simulator_{user_id}',f'{len(result_15)}')
             for i in result_15:
                 cls.list_word.append(i)
@@ -67,6 +67,8 @@ class Simulator:
                     count = full_dict_user[1].get(key)
                 elif value == 4:
                     count = full_dict_user[1].get(key)
+                elif value == 5:
+                    count = full_dict_user[1].get(key)
                 return f'{key} - {count}'
         else:
             return check_end
@@ -97,7 +99,7 @@ class Simulator:
                 data[0][f'{page}'][f'{word_en}'] = 4
                 await storage.set(f'{user_id}', json.dumps(data))
             else:
-                data[0][f'{page}'][f'{word_en}'] = 3
+                data[0][f'{page}'][f'{word_en}'] = 5
                 await storage.set(f'{user_id}', json.dumps(data))
             page = (await storage.get(f'current_page_{user_id}')).decode('utf-8')
             await storage.set(f'current_page_{user_id}', f'{int(page) + 1}')
@@ -105,7 +107,7 @@ class Simulator:
             return text
         else:
             _ = data[0][f'{page}'][f'{word_en}']
-            if _ != 3 and _ != 4:
+            if _ not in [3,4,5]:
                 data[0][f'{page}'][f'{word_en}'] += 1
             await storage.set(f'{user_id}',json.dumps(data))
             text = await cls.get_word_about_page(user_id,page)
@@ -118,7 +120,7 @@ class Simulator:
         learned_word = ''
         for page,dict in full_dict_user[0].items():
             for word,count in dict.items():
-                if count == 0 or count == 1 or count == 2:
+                if count == 0 or count == 1 or count == 2 or count == 3:
                     value += 1
                 if count == 4:
                     lists_word_for_increase.append(word)
