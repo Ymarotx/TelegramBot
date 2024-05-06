@@ -11,7 +11,7 @@ LEXICON_SIMULATOR: dict[str,str] = {
     'simulator_check_word' : '<code>Перевод верный, но мне нужно другое слово, попробуй ещё раз</code>',
     'simulator_true_end_1' : '<code>Тест завершён,вы выучили следующие слова:\n',
     'simulator_true_end_2': '<code>Для выхода используйте кнопку /main_menu из главного меню</code>',
-    'simulator_false_end': '<code>Тест завершён, новых слов не было изучено. Для выхода используйте кнопку /main_menu из главного меню</code>',
+    'simulator_false_end': '<code>Тест завершён, новых слов не было изучено. Для выхода используйте кнопку /main_menu из пункта меню слева внизу экрана.</code>',
 }
 
 LEXICON_REMINDER: dict[str, str] = {
