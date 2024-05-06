@@ -258,10 +258,9 @@ async def process_simulator_factory(callback:CallbackQuery,
         mes_del = await callback.message.edit_text(text=LEXICON_MAIN['main_menu'], reply_markup=user_keyboards.main_menu_kb())
         await state.set_state(FSMMainMenu.main_menu)
 
-@router.callback_query(user_keyboards.SimulatorCallbackFactory.filter(),StateFilter(FSMSimulator.simulator_new))
+@router.callback_query(user_keyboards.SimulatorCallbackFactory.filter(),StateFilter(FSMSimulator.simulator_new, FSMSimulator.simulator_new_end ))
 async def process_main_menu_factory(callback:CallbackQuery,
                                     callback_data: user_keyboards.DictCallbackFactory,
-                                    state:FSMContext,
                                     ):
     storage = await Redis.redis_db_0()
     if callback_data.name_step == 'simulator_new' and callback_data.callback == 'forward':
@@ -328,10 +327,12 @@ async def process_simulator_new_session(message:Message,
     await message.delete()
     mes_del = await storage.hget(f'message_del_{message.from_user.id}', 'callback_kb_simulator_new')
     if 'Тест завершён' in res:
-        mes_del = await bot.edit_message_text(text=res, chat_id=message.from_user.id, message_id=int(mes_del.decode('utf-8')))
-        await state.set_state(FSMMainMenu.main_menu)
+        mes_del = await bot.send_message(text=res, chat_id=message.from_user.id)
+        await DeleteMessage.add_to_redis_delete_message(chat_id=message.from_user.id, mes_id=mes_del.message_id)
+        await state.set_state(FSMSimulator.simulator_new_end)
     else:
         mes_del = await bot.edit_message_text(text=res,chat_id=message.from_user.id,message_id=int(mes_del.decode('utf-8')),reply_markup=user_keyboards.simulator_new_pagination_kb(page,last_page))
+        await DeleteMessage.add_to_redis_delete_message(chat_id=message.from_user.id, mes_id=mes_del.message_id)
         await state.set_state(FSMSimulator.simulator_new)
 
 

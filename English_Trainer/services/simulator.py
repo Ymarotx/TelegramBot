@@ -151,6 +151,10 @@ class Simulator:
                         await session.execute(del_word)
                         await session.commit()
                         learned_word += f'{word.word_en}\n '
+            for page, dict in full_dict_user[0].items():
+                for word, count in dict.items():
+                    full_dict_user[0][str(page)][word] = 3
+            await storage.set(f'{user_id}',json.dumps(full_dict_user))
             if learned_word:
                 return LEXICON_SIMULATOR['simulator_true_end_1']+learned_word + LEXICON_SIMULATOR['simulator_true_end_2']
             else:
