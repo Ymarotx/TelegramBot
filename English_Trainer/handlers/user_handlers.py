@@ -286,11 +286,21 @@ async def process_main_menu_factory(callback:CallbackQuery,
             page = str(int(page)-1)
             await storage.set(f'current_page_{callback.from_user.id}', f'{page}')
             text = await Simulator.get_word_about_page(callback.from_user.id, page)
-            mes_edit = await callback.message.edit_text(text=text,
-                                                        reply_markup=user_keyboards.simulator_new_pagination_kb(page,
+            try:
+                mes_edit = await callback.message.edit_text(text=text,
+                                                            reply_markup=user_keyboards.simulator_new_pagination_kb(page,
                                                                                                             last_page))
-            await storage.hset(f'message_del_{callback.from_user.id}', 'callback_kb_simulator_new',
-                               f'{mes_edit.message_id}')
+                await storage.hset(f'message_del_{callback.from_user.id}', 'callback_kb_simulator_new',
+                                   f'{mes_edit.message_id}')
+            except TelegramBadRequest:
+                page = str(int(page) - 1)
+                await storage.set(f'current_page_{callback.from_user.id}', f'{page}')
+                text = await Simulator.get_word_about_page(callback.from_user.id, page)
+                mes_edit = await callback.message.edit_text(text=text,
+                                                            reply_markup=user_keyboards.simulator_new_pagination_kb(page,
+                                                                                                            last_page))
+                await storage.hset(f'message_del_{callback.from_user.id}', 'callback_kb_simulator_new',
+                                   f'{mes_edit.message_id}')
 
 
 @router.callback_query(F.data == 'reminder_start',StateFilter(FSMMainMenu.main_menu))
@@ -315,7 +325,7 @@ async def reminder_start_simulator(callback:CallbackQuery,
                                    ):
     await callback.answer(text=LEXICON_REMINDER['reminder_start'])
 
-@router.message(StateFilter(FSMSimulator))
+@router.message(StateFilter(FSMSimulator.simulator_new))
 async def process_simulator_new_session(message:Message,
                                         state:FSMContext,
                                         bot: Bot,
