@@ -8,6 +8,7 @@ class FSMMainMenu(StatesGroup):
     dict_all = State()
     end_simulator = State()
     reminder = State()
+    add_word = State()
 
 class FSMSimulator(StatesGroup):
     simulator_new = State()

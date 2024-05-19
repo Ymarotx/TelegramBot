@@ -346,25 +346,40 @@ async def process_simulator_new_session(message:Message,
         await state.set_state(FSMSimulator.simulator_new)
 
 
-@router.callback_query(F.data == 'english_kb',StateFilter(FSMMainMenu.dict_all))
+@router.callback_query(F.data == 'english_kb',StateFilter(FSMMainMenu.add_word))
 async def process_add_new_word(callback:CallbackQuery):
     translate = translator.Translate('...')
-    await translate.add_new_word_dict(str(callback.from_user.id))
-    await callback.answer(text=LEXICON_DICT['dict_add'])
+    res = await translate.add_new_word_dict(str(callback.from_user.id))
+    if res:
+        await callback.answer(text=LEXICON_DICT['dict_add'])
+    else:
+        await callback.answer(text=LEXICON_DICT['dict_add_err'])
 
+@router.message(Command(commands='add_word'),StateFilter(FSMMainMenu.main_menu))
+async def process_add_word(message:Message,
+                           state:FSMContext,
+                           bot:Bot):
+    mes_delt = await message.answer(text=LEXICON_MAIN['add_word'])
+    await DeleteMessage.add_to_redis_delete_message(chat_id=message.from_user.id, mes_id=mes_delt.message_id)
+    await state.set_state(FSMMainMenu.add_word)
 
-@router.message(StateFilter(FSMMainMenu.dict_all))
-async def process_translate_ru_en(message:Message,bot:Bot):
-    storage = await Redis.redis_db_0()
+@router.message(StateFilter(FSMMainMenu.add_word))
+async def process_add_word(message: Message,
+                               state: FSMContext,
+                               bot: Bot):
     translate = translator.Translate(message.text)
     translated_text = translate.translate_text()
     translator.Translate.edit_text(translated_text.text,message.text)
     mes_del = await message.answer(text=translated_text.text,reply_markup=translator.create_kb_english())
     await asyncio.sleep(5)
-    await DeleteMessage.add_to_redis_delete_message(chat_id=message.from_user.id, mes_id=mes_del.message_id)
     await bot.delete_message(chat_id=message.chat.id,message_id=mes_del.message_id)
     await bot.delete_message(chat_id=message.chat.id, message_id=message.message_id)
-
+    await DeleteMessage.add_to_redis_delete_message(chat_id=message.from_user.id, mes_id=mes_del.message_id)
+@router.message(Command(commands='add_word'),~StateFilter(FSMMainMenu.main_menu))
+async def process_add_word(message:Message):
+    await message.delete()
+    mes_del = await message.answer(text=LEXICON_MAIN['add_word_err'])
+    await DeleteMessage.add_to_redis_delete_message(chat_id=message.from_user.id, mes_id=mes_del.message_id)
 
 @router.message()
 async def message_delete(message:Message):

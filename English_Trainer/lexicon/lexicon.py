@@ -2,6 +2,8 @@ LEXICON_MAIN: dict[str,str] = {
     'main_menu' : '<b>_____________Главное меню_____________</b>',
     'dict' : '<b>_____________Словари_____________</b>',
     'simulator' : '<b>_____________Тренажёры_____________</b>',
+    'add_word' : '<code>Введите слово для добавления. Для выхода используйте команду /main_menu.</code>',
+    'add_word_err' : '<code>Для добавления слова вы должны быть в главном меню. Для выхода в главное меню используйте /main_menu.</code>'
 }
 
 LEXICON_SIMULATOR: dict[str,str] = {
@@ -10,7 +12,7 @@ LEXICON_SIMULATOR: dict[str,str] = {
     'simulator_first_page': 'Вы уже находитесь на первой странице',  # callbask answer
     'simulator_check_word' : '<code>Перевод верный, но мне нужно другое слово, попробуй ещё раз</code>',
     'simulator_true_end_1' : '<code>Тест завершён,вы выучили следующие слова:\n',
-    'simulator_true_end_2': '<code>Для выхода используйте кнопку /main_menu из главного меню</code>',
+    'simulator_true_end_2': '<code>Для выхода используйте кнопку /main_menu.</code>',
     'simulator_false_end': '<code>Тест завершён, новых слов не было изучено. Для выхода используйте кнопку /main_menu из пункта меню слева внизу экрана.</code>',
 }
 
@@ -25,7 +27,8 @@ LEXICON_REMINDER: dict[str, str] = {
 
 LEXICON_DICT: dict[str, str] = {
     'dict_empty': '<code>На данный момент словарь пуст.</code>',
-    'dict_add' : 'Message added successfully'   #callbask answer
+    'dict_add' : 'Message added successfully',   #callbask answer
+    'dict_add_err': 'Данное слово уже добавлено',  # callbask answer,
 
 }
 
@@ -48,6 +51,7 @@ LEXICON_KEYBOARD: dict[str, str] = {
 
 
 LEXICON_MAIN_MENU: dict[str,str] = {
-    '/main_menu' : 'Главное меню'
+    '/main_menu' : 'Главное меню',
+    '/add_word' : 'Добавить слово'
 
 }

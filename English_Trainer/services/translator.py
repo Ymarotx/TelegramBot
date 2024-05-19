@@ -1,7 +1,7 @@
 from googletrans import Translator
 from aiogram.types import InlineKeyboardButton
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-from sqlalchemy import insert, select
+from sqlalchemy import insert, select,exc
 
 from database.database import async_session
 from database.models import Table_All_Word,Table_New_Word,Table_Users
@@ -39,18 +39,22 @@ class Translate:
 
     async def add_new_word_dict(self,id:str):
         async with async_session() as session:
-            query = (
-                select(Table_Users)
-                .filter(Table_Users.chat_id == id)
-            )
-            user_id = await session.execute(query)
-            user_id = user_id.scalar()
-            stmt = [{'word_en': f'{self.ready_word[0]}', 'word_ru': f'{self.ready_word[1]}', 'user_id' : user_id.id}]
-            insert_word_all = insert(Table_All_Word).values(stmt)
-            insert_word_new = insert(Table_New_Word).values(stmt)
-            await session.execute(insert_word_all)
-            await session.execute(insert_word_new)
-            await session.commit()
+            try:
+                query = (
+                    select(Table_Users)
+                    .filter(Table_Users.chat_id == id)
+                )
+                user_id = await session.execute(query)
+                user_id = user_id.scalar()
+                stmt = [{'word_en': f'{self.ready_word[0]}', 'word_ru': f'{self.ready_word[1]}', 'user_id' : user_id.id}]
+                insert_word_all = insert(Table_All_Word).values(stmt)
+                insert_word_new = insert(Table_New_Word).values(stmt)
+                await session.execute(insert_word_all)
+                await session.execute(insert_word_new)
+                await session.commit()
+                return True
+            except exc.IntegrityError:
+                return False
 
 
 
