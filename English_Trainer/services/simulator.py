@@ -85,10 +85,6 @@ class Simulator:
         word_ru_from_dict = full_dict_user[1].get(word_en_from_dict)
         translate = translator.Translate(answer)
         translate_answer = translate.translate_text()
-        translate_answer.text.lower().replace(',','')
-        word_en_from_dict.lower().replace(',','')
-        answer.lower().replace(',','')
-        word_ru_from_dict.lower().replace(',','')
         lists = await storage.get(f'{user_id}')
         data = json.loads(lists)
         if translate_answer.text.lower() == word_en_from_dict.lower() and answer.lower() != word_ru_from_dict.lower():

@@ -22,7 +22,7 @@ class Dict:
                         lists_text.append(new_text[:max_len + 1])
                         break
                 lenghth -= len(new_text[:max_len])
-                new_text = cls.text[max_len + 1:]
+                new_text = new_text[max_len + 1:]
                 end_len += max_len + 1
             else:
                 lists_text.append(cls.text[end_len + 1:])
