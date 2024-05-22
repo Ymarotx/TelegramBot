@@ -16,7 +16,7 @@ from database.redis_db import Redis
 logger = logging.getLogger(__name__)
 
 async def main():
-    logging.basicConfig(level=logging.INFO,
+    logging.basicConfig(level=logging.DEBUG,
                         filename='logs.log',
                         format='%(filename)s:%(lineno)d #%(levelname)-8s'
                                '[%(asctime)s] - %(name)s - %(message)s'
