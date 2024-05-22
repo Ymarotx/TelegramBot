@@ -79,8 +79,6 @@ class Simulator:
         full_dict_user = json.loads(await storage.get(f'{user_id}'))
         word_en_from_dict = ''
         word_en = ''
-        print(full_dict_user[0])
-        print((await storage.get(f'current_page_{user_id}')).decode('utf-8'))
         for key,value in full_dict_user[0].get((await storage.get(f'current_page_{user_id}')).decode('utf-8')).items():
             word_en_from_dict = key
             word_en = key
@@ -100,9 +98,13 @@ class Simulator:
                 data[0][f'{page}'][f'{word_en}'] = 5
                 await storage.set(f'{user_id}', json.dumps(data))
             page = (await storage.get(f'current_page_{user_id}')).decode('utf-8')
-            await storage.set(f'current_page_{user_id}', f'{int(page) + 1}')
-            text = await cls.get_word_about_page(user_id,str(int(page)+1))
-            return text
+            if int(page) < 15:
+                await storage.set(f'current_page_{user_id}', f'{int(page) + 1}')
+                text = await cls.get_word_about_page(user_id,str(int(page)+1))
+                return text
+            else:
+                text = await cls.get_word_about_page(user_id, str(int(page)))
+                return text
         else:
             _ = data[0][f'{page}'][f'{word_en}']
             if _ not in [3,4,5]:
