@@ -79,6 +79,8 @@ class Simulator:
         full_dict_user = json.loads(await storage.get(f'{user_id}'))
         word_en_from_dict = ''
         word_en = ''
+        print(full_dict_user[0])
+        print((await storage.get(f'current_page_{user_id}')).decode('utf-8'))
         for key,value in full_dict_user[0].get((await storage.get(f'current_page_{user_id}')).decode('utf-8')).items():
             word_en_from_dict = key
             word_en = key
