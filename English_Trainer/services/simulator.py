@@ -1,7 +1,6 @@
 import random
 import json
-import pprint
-import time
+import pymorphy2
 
 from database.database import async_session
 from database.models import Table_New_Word,Table_Users,Table_Learned_Word
@@ -9,6 +8,79 @@ from sqlalchemy import select, insert, update, delete
 from database.redis_db import Redis
 from services import translator
 from lexicon.lexicon import LEXICON_SIMULATOR
+
+
+class CheckText:
+    @classmethod
+    def make_lists(cls,word_user,word_db):
+        word_user,word_db = word_user.replace(',',' ').lower(),word_db.replace(',',' ').lower()
+        lists_user,lists_db = word_user.split(' '),word_db.split(' ')
+        for i in lists_user:
+            if i in ['',' ']:
+                lists_user.remove(i)
+        for i in lists_db:
+            if i in ['',' ']:
+                lists_db.remove(i)
+        # if ' ' in lists_user:
+        #     lists_user.remove(' ')
+        # if ' ' in lists_db:
+        #     lists_db.remove(' ')
+        return lists_user,lists_db
+    @classmethod
+    def check_len(cls,lists_user,lists_db):
+        if len(lists_user) != len(lists_db):
+            return True
+        else:
+            return False
+    @classmethod
+    def check_word_order(cls,lists_user,lists_db):
+        if len(lists_user) < 2:
+            return True if len(lists_db) == 0 else False
+        else:
+            if lists_user[0] in lists_db:
+                lists_db.remove(lists_user[0])
+                return cls.check_word_order(lists_user[1:],lists_db)
+            else:
+                return False
+
+    @classmethod
+    def check_word_termination(cls,lists_user,lists_db):
+        morphy = pymorphy2.MorphAnalyzer()
+        num = 0
+        res = None
+        while num != len(lists_user):
+            word_user = lists_user[num]
+            word_db = lists_db[num]
+            first = morphy.parse(word_user)[0].normal_form
+            second = morphy.parse(word_db)[0].normal_form
+            if word_db == word_user:
+                res = True
+            elif word_db != word_user and first == second:
+                res = True
+            else:
+                res = False
+            num += 1
+        return res
+
+    @classmethod
+    def main_check(cls,word_user,word_db):
+        lists_user,lists_db = cls.make_lists(word_user,word_db)
+        lists_user_check_1,lists_db_check_1 = lists_user,lists_db
+        lists_user_check_2,lists_db_check_2 = lists_user,lists_db
+        lists_user_check_3, lists_db_check_3 = lists_user, lists_db
+        check_1 = cls.check_len(lists_user=lists_user_check_1,lists_db=lists_db_check_1)
+        check_2 = cls.check_word_order(lists_user=lists_user_check_2,lists_db=lists_db_check_2)
+        check_3 = cls.check_word_termination(lists_user=lists_user_check_3,lists_db=lists_db_check_3)
+        if check_1:
+            return '''<code>В моем варинате слов больше, чем в вашем. Попробуйте ещё раз.</code>'''
+        elif check_2:
+            return '''<code>Ваш порядок слов отличен от моего. Попробуйте другой вариант.</code>'''
+        elif check_3:
+            return '''<code>Перевод верный, но в вашем варинате и моём имеются различия в окончаниях, попробуйте другой вариант.\
+            Также если у вас есть буква "ё" замените её на "е".</code>'''
+        # str_user = ' '.join(lists_user)
+        # str_db = ' '.join(lists_db)
+
 
 
 class Simulator:
@@ -37,9 +109,11 @@ class Simulator:
         page = 1
         dict_count_answer = {}
         dict_page_word = {}
+        text_words = ''
         for i in cls.list_word:
             dict_page_word[f'{page}'] = {f'{i.word_en}':0}
             dict_count_answer[f'{i.word_en}'] = f'{i.word_ru}'
+            text_words += f'{i.word_en} - {i.word_ru};\n'
             page += 1
         cls.res = []
         cls.res.append(dict_page_word)
@@ -48,7 +122,7 @@ class Simulator:
         await storage.set(f'{user_id}', json.dumps(cls.res))
         await storage.set(f'current_page_{user_id}','1')
         await storage.hset(f'message_del_{user_id}','callback_kb_simulator_new','0')
-
+        return text_words
     @classmethod
     async def get_word_about_page(cls,user_id:str,page:str):
         storage = await Redis.redis_db_0()
@@ -87,9 +161,7 @@ class Simulator:
         translate_answer = translate.translate_text()
         lists = await storage.get(f'{user_id}')
         data = json.loads(lists)
-        if translate_answer.text.lower() == word_en_from_dict.lower() and answer.lower() != word_ru_from_dict.lower():
-            return LEXICON_SIMULATOR['simulator_check_word']
-        elif answer.lower() == word_ru_from_dict.lower():
+        if answer.lower() == word_ru_from_dict.lower():
             count = data[0][f'{page}'][f'{word_en}']
             if count == 0:
                 data[0][f'{page}'][f'{word_en}'] = 4
@@ -105,6 +177,9 @@ class Simulator:
             else:
                 text = await cls.get_word_about_page(user_id, str(int(page)))
                 return text
+        elif translate_answer.text.lower() == word_en_from_dict.lower():
+            check = CheckText()
+            return check.main_check(word_user=answer,word_db=word_ru_from_dict)
         else:
             _ = data[0][f'{page}'][f'{word_en}']
             if _ not in [3,4,5]:
@@ -135,7 +210,7 @@ class Simulator:
                 words = await session.execute(select(Table_New_Word).filter(Table_New_Word.word_en.in_(lists_word_for_increase)))
                 words = words.scalars().all()
                 for word in words:
-                    if word.count_answer == 5:
+                    if word.count_answer >= 5:
                         query = (
                             select(Table_Users)
                             .filter(Table_Users.chat_id == user_id)

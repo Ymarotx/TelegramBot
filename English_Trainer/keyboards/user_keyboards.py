@@ -103,4 +103,8 @@ def scheduler_kb():
     return kb_builder.as_markup()
 
 
-
+def simulator_new_start_kb():
+    kb_builder = InlineKeyboardBuilder()
+    kb_builder.row(InlineKeyboardButton(text=LEXICON_KEYBOARD['simulator_new_start_kb'], callback_data=SimulatorCallbackFactory(name_step='simulator',
+                                                                                             callback='simulator_new_start').pack()))
+    return kb_builder.as_markup()

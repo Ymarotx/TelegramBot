@@ -231,7 +231,10 @@ async def process_simulator_factory(callback:CallbackQuery,
     if callback_data.name_step == 'simulator' and callback_data.callback == 'simulator_all':
         pass
     if callback_data.name_step == 'simulator' and callback_data.callback == 'simulator_new':
-        await Simulator.create_dicts_new_word(callback.from_user.id)
+        text_words = await Simulator.create_dicts_new_word(callback.from_user.id)
+        mes_edit = await callback.message.edit_text(text=text_words,reply_markup=user_keyboards.simulator_new_start_kb())
+        await storage.hset(f'message_del_{callback.from_user.id}', 'callback_kb_simulator_new', f'{mes_edit.message_id}')
+    if callback_data.name_step == 'simulator' and callback_data.callback == 'simulator_new_start':
         page = (await storage.get(f'current_page_{callback.from_user.id}')).decode('utf-8')
         last_page = (await storage.get(f'last_page_simulator_{callback.from_user.id}')).decode('utf-8')
         text = await Simulator.get_word_about_page(callback.from_user.id,page)
@@ -311,14 +314,10 @@ async def reminder_start_simulator(callback:CallbackQuery,
     await DeleteMessage.add_to_redis_delete_message(chat_id=callback.from_user.id, mes_id=callback.message.message_id)
     await DeleteMessage.message_delete(chat_id=callback.from_user.id,bot=bot)
     storage = await Redis.redis_db_0()
-    await Simulator.create_dicts_new_word(callback.from_user.id)
-    page = (await storage.get(f'current_page_{callback.from_user.id}')).decode('utf-8')
-    last_page = (await storage.get(f'last_page_simulator_{callback.from_user.id}')).decode('utf-8')
-    text = await Simulator.get_word_about_page(callback.from_user.id, page)
-    mes_edit = await callback.message.edit_text(text=text, reply_markup=user_keyboards.simulator_new_pagination_kb(page,
-                                                                                                                   last_page))
+    text_words = await Simulator.create_dicts_new_word(callback.from_user.id)
+    mes_edit = await callback.message.edit_text(text=text_words, reply_markup=user_keyboards.simulator_new_start_kb())
     await storage.hset(f'message_del_{callback.from_user.id}', 'callback_kb_simulator_new', f'{mes_edit.message_id}')
-    await state.set_state(FSMSimulator.simulator_new)
+    await state.set_state(FSMMainMenu.simulator)
 
 @router.callback_query(F.data == 'reminder_start',~StateFilter(FSMMainMenu.main_menu))
 async def reminder_start_simulator(callback:CallbackQuery,
@@ -336,14 +335,18 @@ async def process_simulator_new_session(message:Message,
     last_page = (await storage.get(f'last_page_simulator_{message.from_user.id}')).decode('utf-8')
     await message.delete()
     mes_del = await storage.hget(f'message_del_{message.from_user.id}', 'callback_kb_simulator_new')
-    if 'Тест завершён' in res:
-        mes_del = await bot.send_message(text=res, chat_id=message.from_user.id)
-        await DeleteMessage.add_to_redis_delete_message(chat_id=message.from_user.id, mes_id=mes_del.message_id)
-        await state.set_state(FSMSimulator.simulator_new_end)
-    else:
-        mes_del = await bot.edit_message_text(text=res,chat_id=message.from_user.id,message_id=int(mes_del.decode('utf-8')),reply_markup=user_keyboards.simulator_new_pagination_kb(page,last_page))
-        await DeleteMessage.add_to_redis_delete_message(chat_id=message.from_user.id, mes_id=mes_del.message_id)
-        await state.set_state(FSMSimulator.simulator_new)
+    try:
+        if 'Тест завершён' in res:
+            mes_del = await bot.send_message(text=res, chat_id=message.from_user.id)
+            await DeleteMessage.add_to_redis_delete_message(chat_id=message.from_user.id, mes_id=mes_del.message_id)
+            await state.set_state(FSMSimulator.simulator_new_end)
+        else:
+            mes_del = await bot.edit_message_text(text=res,chat_id=message.from_user.id,message_id=int(mes_del.decode('utf-8')),reply_markup=user_keyboards.simulator_new_pagination_kb(page,last_page))
+            await DeleteMessage.add_to_redis_delete_message(chat_id=message.from_user.id, mes_id=mes_del.message_id)
+            await state.set_state(FSMSimulator.simulator_new)
+    except TelegramBadRequest:
+        pass
+
 
 
 @router.callback_query(F.data == 'english_kb',StateFilter(FSMMainMenu.add_word))

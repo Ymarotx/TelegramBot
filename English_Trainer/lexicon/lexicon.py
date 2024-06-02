@@ -47,6 +47,7 @@ LEXICON_KEYBOARD: dict[str, str] = {
     'scheduler_kb' : '➯ Начать',
     'dict_add' : '➕ Добавить в словарь',
     'back': '🔙 Назад',
+    'simulator_new_start_kb' : '➯ Начать'
 }
 
 
