@@ -21,10 +21,6 @@ class CheckText:
         for i in lists_db:
             if i in ['',' ']:
                 lists_db.remove(i)
-        # if ' ' in lists_user:
-        #     lists_user.remove(' ')
-        # if ' ' in lists_db:
-        #     lists_db.remove(' ')
         return lists_user,lists_db
     @classmethod
     def check_len(cls,lists_user,lists_db):
@@ -158,7 +154,7 @@ class Simulator:
             word_en = key
         word_ru_from_dict = full_dict_user[1].get(word_en_from_dict)
         translate = translator.Translate(answer)
-        translate_answer = translate.translate_text()
+        translate_answer = await translate.translate_text()
         lists = await storage.get(f'{user_id}')
         data = json.loads(lists)
         if answer.lower() == word_ru_from_dict.lower():
@@ -206,7 +202,7 @@ class Simulator:
                 for word in words:
                     word.count_answer += 1
                 session.add_all(words)
-                await session.commit()
+                await session.commit()   #Эту убрать попробовать
                 words = await session.execute(select(Table_New_Word).filter(Table_New_Word.word_en.in_(lists_word_for_increase)))
                 words = words.scalars().all()
                 for word in words:
@@ -217,26 +213,20 @@ class Simulator:
                         )
                         user = await session.execute(query)
                         user = user.scalar()
-
                         stmt = [{'word_en': f'{word.word_en}', 'word_ru': f'{word.word_ru}',
                                  'user_id': user.id,'count_answer' : 0}]
                         insert_word = insert(Table_Learned_Word).values(stmt)
                         del_word = delete(Table_New_Word).where(Table_New_Word.word_en == f'{word.word_en}')
                         await session.execute(insert_word)
                         await session.execute(del_word)
-                        await session.commit()
+                        await session.commit()  #ВОзможно ошибка здесь, сессия была закрыта раньше и не может выполниться вновь, убрать сессеию сверху и сместить эту
                         learned_word += f'{word.word_en}\n '
             for page, dict in full_dict_user[0].items():
                 for word, count in dict.items():
                     full_dict_user[0][str(page)][word] = 3
             await storage.set(f'{user_id}',json.dumps(full_dict_user))
             if learned_word:
-                return LEXICON_SIMULATOR['simulator_true_end_1']+learned_word + LEXICON_SIMULATOR['simulator_true_end_2']
+                return LEXICON_SIMULATOR["simulator_true_end_1"] + learned_word + LEXICON_SIMULATOR["simulator_true_end_2"]
             else:
                 return LEXICON_SIMULATOR['simulator_false_end']
-
-
-
-
-
 

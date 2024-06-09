@@ -232,8 +232,12 @@ async def process_simulator_factory(callback:CallbackQuery,
         pass
     if callback_data.name_step == 'simulator' and callback_data.callback == 'simulator_new':
         text_words = await Simulator.create_dicts_new_word(callback.from_user.id)
-        mes_edit = await callback.message.edit_text(text=text_words,reply_markup=user_keyboards.simulator_new_start_kb())
-        await storage.hset(f'message_del_{callback.from_user.id}', 'callback_kb_simulator_new', f'{mes_edit.message_id}')
+        if text_words:
+            mes_edit = await callback.message.edit_text(text=text_words,reply_markup=user_keyboards.simulator_new_start_kb())
+            await storage.hset(f'message_del_{callback.from_user.id}', 'callback_kb_simulator_new',
+                               f'{mes_edit.message_id}')
+        else:
+            await callback.answer(text=LEXICON_SIMULATOR['simulator_new_error'])
     if callback_data.name_step == 'simulator' and callback_data.callback == 'simulator_new_start':
         page = (await storage.get(f'current_page_{callback.from_user.id}')).decode('utf-8')
         last_page = (await storage.get(f'last_page_simulator_{callback.from_user.id}')).decode('utf-8')
@@ -335,17 +339,18 @@ async def process_simulator_new_session(message:Message,
     last_page = (await storage.get(f'last_page_simulator_{message.from_user.id}')).decode('utf-8')
     await message.delete()
     mes_del = await storage.hget(f'message_del_{message.from_user.id}', 'callback_kb_simulator_new')
-    try:
-        if 'Тест завершён' in res:
-            mes_del = await bot.send_message(text=res, chat_id=message.from_user.id)
-            await DeleteMessage.add_to_redis_delete_message(chat_id=message.from_user.id, mes_id=mes_del.message_id)
-            await state.set_state(FSMSimulator.simulator_new_end)
-        else:
-            mes_del = await bot.edit_message_text(text=res,chat_id=message.from_user.id,message_id=int(mes_del.decode('utf-8')),reply_markup=user_keyboards.simulator_new_pagination_kb(page,last_page))
-            await DeleteMessage.add_to_redis_delete_message(chat_id=message.from_user.id, mes_id=mes_del.message_id)
-            await state.set_state(FSMSimulator.simulator_new)
-    except TelegramBadRequest:
-        pass
+    # try:
+    if 'Тест завершён' in res:
+        mes_del = await bot.send_message(text=res, chat_id=message.from_user.id)
+        await DeleteMessage.add_to_redis_delete_message(chat_id=message.from_user.id, mes_id=mes_del.message_id)
+        await state.set_state(FSMSimulator.simulator_new_end)
+    else:
+        mes_del = await bot.edit_message_text(text=res,chat_id=message.from_user.id,message_id=int(mes_del.decode('utf-8')),reply_markup=user_keyboards.simulator_new_pagination_kb(page,last_page))
+        await DeleteMessage.add_to_redis_delete_message(chat_id=message.from_user.id, mes_id=mes_del.message_id)
+        await state.set_state(FSMSimulator.simulator_new)
+    # except TelegramBadRequest:
+    #     print(1)
+    #     pass
 
 
 
@@ -371,8 +376,8 @@ async def process_add_word(message: Message,
                                state: FSMContext,
                                bot: Bot):
     translate = translator.Translate(message.text)
-    translated_text = translate.translate_text()
-    translator.Translate.edit_text(translated_text.text,message.text)
+    translated_text = await translate.translate_text()
+    await translator.Translate.edit_text(translated_text.text,message.text)
     mes_del = await message.answer(text=translated_text.text,reply_markup=translator.create_kb_english())
     await asyncio.sleep(5)
     await bot.delete_message(chat_id=message.chat.id,message_id=mes_del.message_id)

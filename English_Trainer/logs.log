@@ -200,3 +200,427 @@ dispatcher.py:171 #INFO    [2024-04-30 17:59:48,025] - aiogram.event - Update id
 dispatcher.py:451 #WARNING [2024-04-30 18:00:00,555] - aiogram.dispatcher - Received SIGINT signal
 dispatcher.py:355 #INFO    [2024-04-30 18:00:00,556] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
 dispatcher.py:547 #INFO    [2024-04-30 18:00:00,556] - aiogram.dispatcher - Polling stopped
+main.py:24 #INFO    [2024-05-06 21:28:28,995] - __main__ - Starting bot
+base.py:181 #INFO    [2024-05-06 21:28:29,080] - apscheduler.scheduler - Scheduler started
+base_py3.py:25 #WARNING [2024-05-06 21:28:29,147] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='31'], next run at: 2024-05-07 18:31:00 MSK)" was missed by 2:57:29.147703
+base_py3.py:25 #WARNING [2024-05-06 21:28:29,148] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='37'], next run at: 2024-05-07 18:37:00 MSK)" was missed by 2:51:29.148074
+base_py3.py:25 #WARNING [2024-05-06 21:28:29,148] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='44'], next run at: 2024-05-07 18:44:00 MSK)" was missed by 2:44:29.148286
+base_py3.py:25 #WARNING [2024-05-06 21:28:29,148] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='44'], next run at: 2024-05-07 18:44:00 MSK)" was missed by 2:44:29.148445
+base_py3.py:25 #WARNING [2024-05-06 21:28:29,148] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='55'], next run at: 2024-05-07 18:55:00 MSK)" was missed by 2:33:29.148656
+base_py3.py:25 #WARNING [2024-05-06 21:28:29,148] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='19', minute='47'], next run at: 2024-05-07 19:47:00 MSK)" was missed by 1:41:29.148833
+dispatcher.py:520 #INFO    [2024-05-06 21:28:30,468] - aiogram.dispatcher - Start polling
+dispatcher.py:339 #INFO    [2024-05-06 21:28:30,718] - aiogram.dispatcher - Run polling for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:171 #INFO    [2024-05-06 21:28:33,496] - aiogram.event - Update id=555693170 is handled. Duration 278 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:28:35,750] - aiogram.event - Update id=555693171 is handled. Duration 377 ms by bot id=6251976390
+dispatcher.py:451 #WARNING [2024-05-06 21:32:56,380] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:355 #INFO    [2024-05-06 21:32:56,380] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:547 #INFO    [2024-05-06 21:32:56,381] - aiogram.dispatcher - Polling stopped
+main.py:24 #INFO    [2024-05-06 21:33:01,656] - __main__ - Starting bot
+base.py:181 #INFO    [2024-05-06 21:33:01,747] - apscheduler.scheduler - Scheduler started
+dispatcher.py:520 #INFO    [2024-05-06 21:33:02,589] - aiogram.dispatcher - Start polling
+dispatcher.py:339 #INFO    [2024-05-06 21:33:02,693] - aiogram.dispatcher - Run polling for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:171 #INFO    [2024-05-06 21:33:07,254] - aiogram.event - Update id=555693172 is handled. Duration 699 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:33:09,558] - aiogram.event - Update id=555693173 is handled. Duration 233 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:33:11,680] - aiogram.event - Update id=555693174 is handled. Duration 462 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:33:30,394] - aiogram.event - Update id=555693175 is handled. Duration 2077 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:33:34,028] - aiogram.event - Update id=555693176 is handled. Duration 1576 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:33:39,762] - aiogram.event - Update id=555693177 is handled. Duration 1536 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:33:41,735] - aiogram.event - Update id=555693178 is handled. Duration 1538 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:33:43,888] - aiogram.event - Update id=555693179 is handled. Duration 1567 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:33:47,759] - aiogram.event - Update id=555693180 is handled. Duration 1529 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:33:50,643] - aiogram.event - Update id=555693181 is not handled. Duration 3 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:40:39,395] - aiogram.event - Update id=555693182 is not handled. Duration 2 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:44:23,294] - aiogram.event - Update id=555693183 is not handled. Duration 2 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:44:24,260] - aiogram.event - Update id=555693184 is not handled. Duration 2 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:44:28,580] - aiogram.event - Update id=555693185 is handled. Duration 1336 ms by bot id=6251976390
+dispatcher.py:451 #WARNING [2024-05-06 21:50:17,352] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:355 #INFO    [2024-05-06 21:50:17,353] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:547 #INFO    [2024-05-06 21:50:17,353] - aiogram.dispatcher - Polling stopped
+main.py:24 #INFO    [2024-05-06 21:53:30,072] - __main__ - Starting bot
+base.py:181 #INFO    [2024-05-06 21:53:30,150] - apscheduler.scheduler - Scheduler started
+dispatcher.py:520 #INFO    [2024-05-06 21:53:30,635] - aiogram.dispatcher - Start polling
+dispatcher.py:339 #INFO    [2024-05-06 21:53:30,734] - aiogram.dispatcher - Run polling for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:171 #INFO    [2024-05-06 21:53:42,296] - aiogram.event - Update id=555693186 is handled. Duration 670 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:53:44,336] - aiogram.event - Update id=555693187 is handled. Duration 204 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:53:46,020] - aiogram.event - Update id=555693188 is handled. Duration 304 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:53:47,449] - aiogram.event - Update id=555693189 is handled. Duration 183 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:53:48,416] - aiogram.event - Update id=555693190 is handled. Duration 226 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:53:51,386] - aiogram.event - Update id=555693191 is handled. Duration 868 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:53:55,635] - aiogram.event - Update id=555693192 is handled. Duration 822 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:54:00,029] - aiogram.event - Update id=555693193 is handled. Duration 811 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:54:05,107] - aiogram.event - Update id=555693194 is handled. Duration 881 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:54:07,985] - aiogram.event - Update id=555693195 is handled. Duration 891 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:54:09,476] - aiogram.event - Update id=555693196 is handled. Duration 878 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:54:11,679] - aiogram.event - Update id=555693197 is handled. Duration 1208 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:54:17,936] - aiogram.event - Update id=555693198 is handled. Duration 809 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:54:21,265] - aiogram.event - Update id=555693199 is not handled. Duration 1074 ms by bot id=6251976390
+dispatcher.py:313 #ERROR   [2024-05-06 21:54:21,266] - aiogram.event - Cause exception while process update id=555693199 by bot id=6251976390
+AttributeError: type object 'FSMMainMenu' has no attribute 'simulator_new_end'
+Traceback (most recent call last):
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 307, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 39, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 274, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 135, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 128, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/daniil/Work/PycharmProjects/TelegramBots/English_Trainer/handlers/user_handlers.py", line 333, in process_simulator_new_session
+    await state.set_state(FSMMainMenu.simulator_new_end)
+AttributeError: type object 'FSMMainMenu' has no attribute 'simulator_new_end'
+dispatcher.py:171 #INFO    [2024-05-06 21:54:24,805] - aiogram.event - Update id=555693200 is handled. Duration 343 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:54:30,265] - aiogram.event - Update id=555693201 is handled. Duration 180 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 21:54:32,064] - aiogram.event - Update id=555693202 is handled. Duration 164 ms by bot id=6251976390
+dispatcher.py:451 #WARNING [2024-05-06 22:03:01,860] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:355 #INFO    [2024-05-06 22:03:01,861] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:547 #INFO    [2024-05-06 22:03:01,862] - aiogram.dispatcher - Polling stopped
+main.py:24 #INFO    [2024-05-06 22:03:06,477] - __main__ - Starting bot
+base.py:181 #INFO    [2024-05-06 22:03:06,556] - apscheduler.scheduler - Scheduler started
+dispatcher.py:520 #INFO    [2024-05-06 22:03:07,073] - aiogram.dispatcher - Start polling
+dispatcher.py:339 #INFO    [2024-05-06 22:03:07,166] - aiogram.dispatcher - Run polling for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:171 #INFO    [2024-05-06 22:04:37,670] - aiogram.event - Update id=555693203 is handled. Duration 3584 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:04:39,601] - aiogram.event - Update id=555693204 is handled. Duration 1199 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:04:41,867] - aiogram.event - Update id=555693205 is handled. Duration 201 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:04:43,165] - aiogram.event - Update id=555693206 is handled. Duration 255 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:04:49,746] - aiogram.event - Update id=555693207 is handled. Duration 876 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:04:59,263] - aiogram.event - Update id=555693208 is handled. Duration 898 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:05:06,943] - aiogram.event - Update id=555693209 is not handled. Duration 1057 ms by bot id=6251976390
+dispatcher.py:313 #ERROR   [2024-05-06 22:05:06,943] - aiogram.event - Cause exception while process update id=555693209 by bot id=6251976390
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 307, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 39, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 274, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 135, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 128, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/daniil/Work/PycharmProjects/TelegramBots/English_Trainer/handlers/user_handlers.py", line 335, in process_simulator_new_session
+    mes_del = await bot.edit_message_text(text=res,chat_id=message.from_user.id,message_id=int(mes_del.decode('utf-8')),reply_markup=user_keyboards.simulator_new_pagination_kb(page,last_page))
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/client/bot.py", line 1476, in edit_message_text
+    return await self(call, request_timeout=request_timeout)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/client/bot.py", line 433, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/client/session/base.py", line 251, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/client/session/aiohttp.py", line 170, in make_request
+    response = self.check_response(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/client/session/base.py", line 114, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+dispatcher.py:171 #INFO    [2024-05-06 22:05:09,700] - aiogram.event - Update id=555693210 is handled. Duration 947 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:05:11,774] - aiogram.event - Update id=555693211 is handled. Duration 1353 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:05:13,346] - aiogram.event - Update id=555693212 is handled. Duration 1070 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:05:21,133] - aiogram.event - Update id=555693213 is handled. Duration 1084 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:05:43,505] - aiogram.event - Update id=555693214 is handled. Duration 2756 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:05:57,850] - aiogram.event - Update id=555693215 is handled. Duration 996 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:05:59,734] - aiogram.event - Update id=555693216 is handled. Duration 988 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:06:06,263] - aiogram.event - Update id=555693217 is not handled. Duration 1146 ms by bot id=6251976390
+dispatcher.py:313 #ERROR   [2024-05-06 22:06:06,263] - aiogram.event - Cause exception while process update id=555693217 by bot id=6251976390
+AttributeError: type object 'FSMMainMenu' has no attribute 'simulator_new_end'
+Traceback (most recent call last):
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 307, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 39, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 274, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 135, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 128, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/daniil/Work/PycharmProjects/TelegramBots/English_Trainer/handlers/user_handlers.py", line 333, in process_simulator_new_session
+    await state.set_state(FSMMainMenu.simulator_new_end)
+AttributeError: type object 'FSMMainMenu' has no attribute 'simulator_new_end'
+dispatcher.py:171 #INFO    [2024-05-06 22:06:09,053] - aiogram.event - Update id=555693218 is handled. Duration 165 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:06:11,599] - aiogram.event - Update id=555693219 is handled. Duration 209 ms by bot id=6251976390
+dispatcher.py:451 #WARNING [2024-05-06 22:07:00,588] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:355 #INFO    [2024-05-06 22:07:00,633] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:547 #INFO    [2024-05-06 22:07:00,633] - aiogram.dispatcher - Polling stopped
+main.py:24 #INFO    [2024-05-06 22:07:04,851] - __main__ - Starting bot
+base.py:181 #INFO    [2024-05-06 22:07:04,933] - apscheduler.scheduler - Scheduler started
+dispatcher.py:520 #INFO    [2024-05-06 22:07:07,054] - aiogram.dispatcher - Start polling
+dispatcher.py:339 #INFO    [2024-05-06 22:07:07,510] - aiogram.dispatcher - Run polling for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:171 #INFO    [2024-05-06 22:07:18,217] - aiogram.event - Update id=555693220 is handled. Duration 7014 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:07:27,125] - aiogram.event - Update id=555693221 is handled. Duration 4277 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:07:28,289] - aiogram.event - Update id=555693222 is handled. Duration 851 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:07:30,837] - aiogram.event - Update id=555693223 is handled. Duration 946 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:07:45,999] - aiogram.event - Update id=555693224 is handled. Duration 2082 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:07:49,686] - aiogram.event - Update id=555693225 is handled. Duration 2800 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:07:51,291] - aiogram.event - Update id=555693226 is handled. Duration 2260 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:08:02,655] - aiogram.event - Update id=555693227 is handled. Duration 1829 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:08:06,955] - aiogram.event - Update id=555693228 is handled. Duration 1536 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:08:13,514] - aiogram.event - Update id=555693229 is handled. Duration 1847 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:08:16,484] - aiogram.event - Update id=555693230 is handled. Duration 1950 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:08:18,553] - aiogram.event - Update id=555693231 is handled. Duration 1666 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:08:23,346] - aiogram.event - Update id=555693232 is handled. Duration 1822 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:08:33,038] - aiogram.event - Update id=555693233 is handled. Duration 2226 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:08:39,260] - aiogram.event - Update id=555693234 is not handled. Duration 1894 ms by bot id=6251976390
+dispatcher.py:313 #ERROR   [2024-05-06 22:08:39,260] - aiogram.event - Cause exception while process update id=555693234 by bot id=6251976390
+AttributeError: type object 'FSMMainMenu' has no attribute 'simulator_new_end'
+Traceback (most recent call last):
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 307, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 39, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 274, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 135, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 128, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/daniil/Work/PycharmProjects/TelegramBots/English_Trainer/handlers/user_handlers.py", line 333, in process_simulator_new_session
+    await state.set_state(FSMMainMenu.simulator_new_end)
+AttributeError: type object 'FSMMainMenu' has no attribute 'simulator_new_end'
+dispatcher.py:171 #INFO    [2024-05-06 22:08:43,407] - aiogram.event - Update id=555693235 is handled. Duration 512 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:08:49,448] - aiogram.event - Update id=555693236 is handled. Duration 614 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:08:51,311] - aiogram.event - Update id=555693237 is handled. Duration 629 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:08:53,296] - aiogram.event - Update id=555693238 is handled. Duration 543 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:08:55,176] - aiogram.event - Update id=555693239 is handled. Duration 607 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:08:58,361] - aiogram.event - Update id=555693240 is handled. Duration 516 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:09:00,514] - aiogram.event - Update id=555693241 is handled. Duration 467 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:09:09,061] - aiogram.event - Update id=555693242 is handled. Duration 4254 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:10:21,840] - aiogram.event - Update id=555693243 is not handled. Duration 1056 ms by bot id=6251976390
+dispatcher.py:313 #ERROR   [2024-05-06 22:10:21,840] - aiogram.event - Cause exception while process update id=555693243 by bot id=6251976390
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 307, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 39, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 274, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 135, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 128, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/daniil/Work/PycharmProjects/TelegramBots/English_Trainer/handlers/user_handlers.py", line 335, in process_simulator_new_session
+    await DeleteMessage.add_to_redis_delete_message(chat_id=message.from_user.id, mes_id=mes_del.message_id)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/client/bot.py", line 1476, in edit_message_text
+    return await self(call, request_timeout=request_timeout)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/client/bot.py", line 433, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/client/session/base.py", line 251, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/client/session/aiohttp.py", line 170, in make_request
+    response = self.check_response(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/client/session/base.py", line 114, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+dispatcher.py:171 #INFO    [2024-05-06 22:22:47,809] - aiogram.event - Update id=555693244 is handled. Duration 810 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:22:50,866] - aiogram.event - Update id=555693245 is handled. Duration 123 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:22:52,481] - aiogram.event - Update id=555693246 is handled. Duration 390 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:22:56,273] - aiogram.event - Update id=555693247 is handled. Duration 899 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:23:02,250] - aiogram.event - Update id=555693248 is handled. Duration 808 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:23:09,856] - aiogram.event - Update id=555693249 is handled. Duration 921 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:23:11,700] - aiogram.event - Update id=555693250 is handled. Duration 848 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:23:13,410] - aiogram.event - Update id=555693251 is handled. Duration 897 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:23:16,109] - aiogram.event - Update id=555693252 is handled. Duration 951 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:23:20,914] - aiogram.event - Update id=555693253 is handled. Duration 838 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:23:22,272] - aiogram.event - Update id=555693254 is handled. Duration 848 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:23:23,954] - aiogram.event - Update id=555693255 is handled. Duration 1126 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:23:27,423] - aiogram.event - Update id=555693256 is not handled. Duration 908 ms by bot id=6251976390
+dispatcher.py:313 #ERROR   [2024-05-06 22:23:27,423] - aiogram.event - Cause exception while process update id=555693256 by bot id=6251976390
+AttributeError: type object 'FSMMainMenu' has no attribute 'simulator_new_end'
+Traceback (most recent call last):
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 307, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 39, in __call__
+    return await handler(event, data)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 274, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 135, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 128, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/daniil/.local/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/daniil/Work/PycharmProjects/TelegramBots/English_Trainer/handlers/user_handlers.py", line 333, in process_simulator_new_session
+    else:
+AttributeError: type object 'FSMMainMenu' has no attribute 'simulator_new_end'
+dispatcher.py:171 #INFO    [2024-05-06 22:23:37,351] - aiogram.event - Update id=555693257 is handled. Duration 3420 ms by bot id=6251976390
+dispatcher.py:451 #WARNING [2024-05-06 22:27:06,679] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:355 #INFO    [2024-05-06 22:27:06,679] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:547 #INFO    [2024-05-06 22:27:06,680] - aiogram.dispatcher - Polling stopped
+main.py:24 #INFO    [2024-05-06 22:27:11,824] - __main__ - Starting bot
+base.py:181 #INFO    [2024-05-06 22:27:11,906] - apscheduler.scheduler - Scheduler started
+dispatcher.py:520 #INFO    [2024-05-06 22:27:12,426] - aiogram.dispatcher - Start polling
+dispatcher.py:339 #INFO    [2024-05-06 22:27:12,520] - aiogram.dispatcher - Run polling for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:171 #INFO    [2024-05-06 22:28:52,808] - aiogram.event - Update id=555693258 is handled. Duration 736 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:28:55,115] - aiogram.event - Update id=555693259 is handled. Duration 163 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:28:56,838] - aiogram.event - Update id=555693260 is handled. Duration 336 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:29:00,933] - aiogram.event - Update id=555693261 is handled. Duration 989 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:29:03,500] - aiogram.event - Update id=555693262 is handled. Duration 962 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:29:05,485] - aiogram.event - Update id=555693263 is handled. Duration 1033 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:29:07,216] - aiogram.event - Update id=555693264 is handled. Duration 1154 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:29:08,576] - aiogram.event - Update id=555693265 is handled. Duration 824 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:29:11,512] - aiogram.event - Update id=555693266 is handled. Duration 849 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:29:16,014] - aiogram.event - Update id=555693267 is handled. Duration 1081 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:29:18,172] - aiogram.event - Update id=555693268 is handled. Duration 265 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:29:21,813] - aiogram.event - Update id=555693269 is handled. Duration 122 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:29:22,944] - aiogram.event - Update id=555693270 is handled. Duration 180 ms by bot id=6251976390
+dispatcher.py:171 #INFO    [2024-05-06 22:29:26,931] - aiogram.event - Update id=555693271 is handled. Duration 559 ms by bot id=6251976390
+dispatcher.py:451 #WARNING [2024-05-06 22:29:40,425] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:355 #INFO    [2024-05-06 22:29:40,425] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:547 #INFO    [2024-05-06 22:29:40,426] - aiogram.dispatcher - Polling stopped
+main.py:24 #INFO    [2024-05-19 14:38:02,644] - __main__ - Starting bot
+base.py:181 #INFO    [2024-05-19 14:38:02,730] - apscheduler.scheduler - Scheduler started
+base_py3.py:25 #WARNING [2024-05-19 14:38:02,761] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='31'], next run at: 2024-05-19 18:31:00 MSK)" was missed by 20:07:02.761829
+base_py3.py:25 #WARNING [2024-05-19 14:38:02,762] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='37'], next run at: 2024-05-19 18:37:00 MSK)" was missed by 20:01:02.762191
+base_py3.py:25 #WARNING [2024-05-19 14:38:02,762] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='44'], next run at: 2024-05-19 18:44:00 MSK)" was missed by 19:54:02.762435
+base_py3.py:25 #WARNING [2024-05-19 14:38:02,762] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='44'], next run at: 2024-05-19 18:44:00 MSK)" was missed by 19:54:02.762635
+base_py3.py:25 #WARNING [2024-05-19 14:38:02,762] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='55'], next run at: 2024-05-19 18:55:00 MSK)" was missed by 19:43:02.762817
+base_py3.py:25 #WARNING [2024-05-19 14:38:02,762] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='19', minute='47'], next run at: 2024-05-19 19:47:00 MSK)" was missed by 18:51:02.762965
+dispatcher.py:520 #INFO    [2024-05-19 14:38:03,178] - aiogram.dispatcher - Start polling
+dispatcher.py:339 #INFO    [2024-05-19 14:38:03,260] - aiogram.dispatcher - Run polling for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:451 #WARNING [2024-05-19 14:38:11,476] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:355 #INFO    [2024-05-19 14:38:11,477] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:547 #INFO    [2024-05-19 14:38:11,477] - aiogram.dispatcher - Polling stopped
+main.py:24 #INFO    [2024-05-26 21:48:09,149] - __main__ - Starting bot
+base.py:181 #INFO    [2024-05-26 21:48:09,229] - apscheduler.scheduler - Scheduler started
+base_py3.py:25 #WARNING [2024-05-26 21:48:09,290] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='31'], next run at: 2024-05-27 18:31:00 MSK)" was missed by 3:17:09.290105
+base_py3.py:25 #WARNING [2024-05-26 21:48:09,290] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='37'], next run at: 2024-05-27 18:37:00 MSK)" was missed by 3:11:09.290388
+base_py3.py:25 #WARNING [2024-05-26 21:48:09,290] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='44'], next run at: 2024-05-27 18:44:00 MSK)" was missed by 3:04:09.290586
+base_py3.py:25 #WARNING [2024-05-26 21:48:09,290] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='44'], next run at: 2024-05-27 18:44:00 MSK)" was missed by 3:04:09.290738
+base_py3.py:25 #WARNING [2024-05-26 21:48:09,290] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='18', minute='55'], next run at: 2024-05-27 18:55:00 MSK)" was missed by 2:53:09.290932
+base_py3.py:25 #WARNING [2024-05-26 21:48:09,291] - apscheduler.executors.default - Run time of job "Scheduler.send_message (trigger: cron[hour='19', minute='47'], next run at: 2024-05-27 19:47:00 MSK)" was missed by 2:01:09.291133
+dispatcher.py:520 #INFO    [2024-05-26 21:48:09,781] - aiogram.dispatcher - Start polling
+dispatcher.py:339 #INFO    [2024-05-26 21:48:09,870] - aiogram.dispatcher - Run polling for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:451 #WARNING [2024-05-26 21:48:15,363] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:355 #INFO    [2024-05-26 21:48:15,364] - aiogram.dispatcher - Polling stopped for bot @MyMoulagaBot id=6251976390 - 'Working Field'
+dispatcher.py:547 #INFO    [2024-05-26 21:48:15,364] - aiogram.dispatcher - Polling stopped
